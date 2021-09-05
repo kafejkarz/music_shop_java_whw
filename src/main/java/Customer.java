@@ -1,5 +1,4 @@
-package customers;
-
+import instruments.Guitar;
 import instruments.Instrument;
 import instruments.Piano;
 
@@ -28,5 +27,16 @@ public class Customer {
 
     public int getInstrumentsCount() {
         return this.costam.size();
+    }
+
+
+    public void addInstrument(Piano piano) {
+        this.costam.add(piano);
+    }
+
+    public void buyInstrument(Piano piano) {
+        addInstrument(piano);
+        if(piano.getSellPrice() < this.wallet);
+        this.wallet -= piano.getSellPrice();
     }
 }
