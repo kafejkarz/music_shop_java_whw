@@ -1,2 +1,6 @@
-package Instruments;public interface IPlay {
+package instruments;
+
+
+public interface IPlay {
+    String canPlay();
 }

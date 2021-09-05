@@ -1,6 +1,6 @@
-package Items;
+package instruments;
 
-import javax.sound.midi.Instrument;
+
 
 public class Piano extends Instrument {
 
@@ -8,8 +8,9 @@ public class Piano extends Instrument {
         super(brand, price, sellPrice, colour);
     }
 
+
     @Override
-    public Object getData() {
+    public String canPlay() {
         return null;
     }
 }

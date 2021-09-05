@@ -1,27 +1,24 @@
-package Items;
+package instruments;
 
-public abstract class Instrument {
+public abstract class Instrument implements IPlay{
 
     private String brand;
-    private String name;
     private double price;
     private double sellPrice;
     private String colour;
 
-    public Instrument(String brand, String name, double price, double sellPrice, String colour){
+
+    public Instrument(String brand, double price, double sellPrice, String colour){
         this.brand = brand;
-        this.name = name;
         this.price = price;
         this.sellPrice = sellPrice;
         this. colour = colour;
+
+
     }
 
     public String getBrand() {
         return brand;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getPrice() {
