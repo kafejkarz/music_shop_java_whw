@@ -1,6 +1,8 @@
 package instruments;
 
-public abstract class Instrument implements IPlay{
+import behaviours.IPlay;
+
+public abstract class Instrument implements IPlay {
 
     private String brand;
     private double price;
@@ -8,11 +10,13 @@ public abstract class Instrument implements IPlay{
     private String colour;
 
 
+
     public Instrument(String brand, double price, double sellPrice, String colour){
         this.brand = brand;
         this.price = price;
         this.sellPrice = sellPrice;
         this. colour = colour;
+
 
 
     }

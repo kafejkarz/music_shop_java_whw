@@ -3,6 +3,7 @@ import instruments.Instrument;
 import instruments.Piano;
 import org.junit.Before;
 import org.junit.Test;
+import people.Customer;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +18,7 @@ public class CustomerTest {
     @Before
     public void before(){
         piano = new Piano("Yamaha", 130, 170, "black");
-        guitar = new Guitar("Martin & comp", 200, 230, "light brown");
+        guitar = new Guitar("Martin & comp", 300, 100, "light brown");
         customer = new Customer("Arek", 200);
 
     }
@@ -40,7 +41,6 @@ public class CustomerTest {
     @Test
     public void canBuyInstrument(){
         customer.buyInstrument(piano);
-        assertEquals(1,this.customer.getInstrumentsCount());
         assertEquals(30, this.customer.getWallet(),0.01);
     }
 
@@ -50,6 +50,7 @@ public class CustomerTest {
         customer.buyInstrument(piano);
         assertEquals(-140,this.customer.getWallet(),0.01);
     }
+
 
 
 

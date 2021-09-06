@@ -6,6 +6,7 @@ public class Violin extends Instrument{
         super(brand, price, sellPrice, colour);
     }
 
+
     @Override
     public String canPlay() {
         return null;

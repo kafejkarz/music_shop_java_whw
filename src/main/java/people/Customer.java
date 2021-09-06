@@ -1,19 +1,21 @@
+package people;
+
 import instruments.Guitar;
 import instruments.Instrument;
 import instruments.Piano;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer  {
 
     private String name;
     private double wallet;
-    private ArrayList<Instrument> costam;
+    private ArrayList<Instrument> instruments;
 
     public Customer(String name, double wallet){
         this.name = name;
         this.wallet = wallet;
-        this.costam = new ArrayList<>();
+        this.instruments = new ArrayList<>();
     }
 
 
@@ -26,17 +28,19 @@ public class Customer {
     }
 
     public int getInstrumentsCount() {
-        return this.costam.size();
+        return this.instruments.size();
     }
 
 
     public void addInstrument(Piano piano) {
-        this.costam.add(piano);
+        this.instruments.add(piano);
     }
 
     public void buyInstrument(Piano piano) {
         addInstrument(piano);
-        if(piano.getSellPrice() < this.wallet);
+//        if(piano.getSellPrice() < this.wallet);
         this.wallet -= piano.getSellPrice();
     }
+
+
 }

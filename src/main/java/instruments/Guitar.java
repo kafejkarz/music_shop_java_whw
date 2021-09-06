@@ -6,8 +6,9 @@ public class Guitar extends Instrument {
         super(brand, price, sellPrice, colour);
     }
 
+
     @Override
     public String canPlay() {
-        return null;
+        return "guitar have six strings";
     }
 }

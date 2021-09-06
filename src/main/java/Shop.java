@@ -1,15 +1,17 @@
+import behaviours.ISell;
+
 import java.util.ArrayList;
 
-public class Shop {
+public class Shop implements ISell {
 
     private String name;
     private double till;
-    private ArrayList<Isell> stock;
+    private ArrayList<ISell> stock;
 
     public Shop(String name,double till){
         this.name = name;
         this.till = till;
-        this.stock = new ArrayList<Isell>();
+        this.stock = new ArrayList<ISell>();
     }
 
     public String getName() {
@@ -19,4 +21,10 @@ public class Shop {
     public double getTill() {
         return till;
     }
+
+    @Override
+    public double shopIncome() {
+        return 0;
+    }
+
 }
